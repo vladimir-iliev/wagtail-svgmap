@@ -6,7 +6,7 @@ from django.forms.utils import flatatt
 from django.utils.html import escape, mark_safe
 from django.utils.translation import ugettext_lazy as _
 
-from wagtail.wagtailcore import blocks
+from wagtail.core import blocks
 from wagtail_svgmap.models import ImageMap
 
 

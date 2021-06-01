@@ -1,8 +1,8 @@
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from wagtail.wagtailadmin.edit_handlers import FieldPanel, PageChooserPanel
-from wagtail.wagtaildocs.edit_handlers import DocumentChooserPanel
+from wagtail.admin.edit_handlers import FieldPanel, PageChooserPanel
+from wagtail.documents.edit_handlers import DocumentChooserPanel
 
 
 class LinkFields(models.Model):
@@ -13,6 +13,7 @@ class LinkFields(models.Model):
     )
     link_page = models.ForeignKey(
         'wagtailcore.Page',
+        models.CASCADE,
         null=True,
         blank=True,
         related_name='+',
@@ -20,6 +21,7 @@ class LinkFields(models.Model):
     )
     link_document = models.ForeignKey(
         'wagtaildocs.Document',
+        models.CASCADE,
         null=True,
         blank=True,
         related_name='+',

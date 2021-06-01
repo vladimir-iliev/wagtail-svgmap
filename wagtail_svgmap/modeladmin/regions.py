@@ -3,7 +3,7 @@ from django.shortcuts import redirect
 
 from wagtail.contrib.modeladmin.options import ModelAdmin
 from wagtail.contrib.modeladmin.views import CreateView, DeleteView, EditView
-from wagtail.wagtailadmin import messages
+from wagtail.admin import messages
 from wagtail_svgmap.models import ImageMap, Region
 
 from .image_maps import ImageMapModelAdmin
